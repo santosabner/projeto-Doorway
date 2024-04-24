@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/src/css/styleHOME.css">
+  <link rel="shortcut icon" href="/imagens/logo2.ico" type="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" rel="stylesheet">
+  <title>Pagina Principal</title>
+</head>
+<body>
+
+  <header class="header">
+    <a href="/site.html">
+    <img src="/imagens/DoorWay.png" alt="Logo-Projeto" class="logo">
+  </a>
+    <nav class="navbar">
+      <a href="/src/html/home.html">Mapa</a>
+      <a href="/src/html/projeto.html">Nosso projeto</a>
+      <a href="/src/html/Contatos.html">Contatos</a>
+    </nav>
+  </header>
+
+  <h1>BEM VINDO AO NOSSO MAPA INTERATIVO!</h1>
+  <h3>Basta abrir as instruções para obeter mais informações:</h3>
+
+  <div class="map-class">
+  <img id="imagem" src="/imagens/mapa.png" alt="imagem da planta" usemap="#image-map" class="mapa-image">
+
+  <div class="map-selector"> 
+  </div>
+</div>
+
+    <map name="image-map" id="image-map">
+      <area shape="rect" coords="208,391,367,421" onclick="abrirModal()" class="botao" alt="Recepção" title="Secretaria/Cejur" target="alvo">
+      <area shape="rect" coords="276,183,320,273" onclick="abrirModal2()" class="botao" alt="Reitoria" title="Reitoria" target="alvo">
+      <area shape="rect" coords="568,362,662,421" onclick="abrirModal3()" class="botao" alt="Ambulatorio" title="Ambulatorio" target="alvo">
+      <area shape="rect" coords="997,185,1243,295" onclick="abrirModal4()" class="botao" alt="Refeitorio" title="Refeitorio" target="alvo">
+      <area shape="rect" coords="980,295,1167,343" onclick="abrirModal4()" class="botao" alt="Refeitorio" title="Refeitorio" target="alvo">
+      <area shape="rect" coords="1246,185,1411,423" onclick="abrirModal4()" class="botao" alt="Refeitorio" title="Refeitorio" target="alvo">
+      <area shape="rect" coords="1034,348,1123,420" onclick="abrirModal5()" class="botao" alt="Graficas" title="Graficas" target="alvo">
+      <area shape="rect" coords="888,13,1099,181" onclick="abrirModal6()" class="botao" alt="Ginásio" title="Ginásio" target="alvo">
+      <area shape="rect" coords="1183,578,1436,677" onclick="abrirModal7()" class="botao" alt="Mini-Auditorio" title="Mini-Auditorio" target="alvo">
+      <area shape="rect" coords="476,805,568,880" onclick="abrirModal8()" class="botao" alt="Escadas P/ 2 Andar" title="Escadas P/ 2 Andar" target="alvo">
+      <area shape="rect" coords="1185,424,1231,457" onclick="abrirModal9()" class="botao" alt="Escada P/ 2 Andar" title="Escada P/ 2 Andar gourmert" target="alvo">
+    </map>
+
+    <div onclick="abrirInstrucao()" class="Instrucoes-botao"> Instruções sobre o mapa:</div>
+
+    <div class="janela-Instrucao" id="janela-Instrucao">
+      <div class="instruction">
+        <button class="fechar" id="fechar">X</button>
+        <h1 Class="titulo-Instrucao"> Siga as instruções para não se perder  </h1>
+        <p id="mensagem-Instrucao"></p>
+      </div>
+    </div>
+
+
+    <div class="janela-modal" id="janela-modal">
+      <div class="modal">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Entrada.jpg" alt="Reitoria" class="imagens">
+        <h1 class="nome-local">Recepção</h1>
+        <p id="mensagem"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal2" id="janela-modal2">
+      <div class="modal2">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Reitoria.jpg" alt="Entrada" class="imagens">
+        <h1 class="nome-local">Reitoria</h1>
+        
+        <p id="mensagem2"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal3" id="janela-modal3">
+      <div class="modal3">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Ambulatorio.jpeg" alt="Ambulatório" class="imagens">
+        <h1 class="nome-local">Ambulatório</h1>
+        <p id="mensagem3"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal4" id="janela-modal4">
+      <div class="modal4">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Lanchonete-Banco.jpg" alt="Refeitório" class="slide">
+        <img src="/imagens/Mapa/Refeitorio-banco.jpg" alt="Refeitório" class="slide">
+        <img src="/imagens/Mapa/refeitorio2.jpg" alt="Refeitório" class="slide">
+        <img src="/imagens/Mapa/refeitorio.jpg" alt="Refeitório" class="slide">
+        <img src="/imagens/Mapa/refeitorio4.png" alt="Refeitório" class="slide">
+        <img src="/imagens/Mapa/Lanchonete-DJ.jpg" alt="Refeitório" class="slide">
+        <h1 class="nome-local">Refeitório</h1>
+        <p id="mensagem4" class="mensagem4"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal5" id="janela-modal5">
+      <div class="modal5">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Grafica.jpg" alt="Graficas" class="passar-foto">
+        <img src="/imagens/Mapa/Outra Grafica.jpg" alt="Graficas" class="passar-foto">
+        <h1 class="nome-local">Gráficas</h1>
+        <p id="mensagem5"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal6" id="janela-modal6">
+      <div class="modal6">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Ginasio.jpg" alt="Ginásio" class="imagens">
+        <h1 class="nome-local">Ginásio</h1>
+        <p id="mensagem6"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal7" id="janela-modal7">
+      <div class="modal7">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Auditorio.jpg" alt="MiniAuditório" class="imagens">
+        <h1 class="nome-local">MiniAuditório</h1>
+        <p id="mensagem7"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal8" id="janela-modal8">
+      <div class="modal8">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/Escada - ADS.jpg" alt="Escadas P/ 2 andar" class="imagens">
+        <h1 class="nome-local">Escadas P/ 2 andar</h1>
+        <p id="mensagem8"> </p>
+      </div>
+    </div>
+
+    <div class="janela-modal9" id="janela-modal9">
+      <div class="modal9">
+        <button class="fechar" id="fechar">X</button>
+        <img src="/imagens/Mapa/escada-auditorio.jpg" alt="Escadas P/ 2 andar" class="imagens">
+        <h1 class="nome-local">Escadas</h1>
+        <p id="mensagem9"> </p>
+      </div>
+    </div>
+
+  <footer>
+            &copy DoorWay - Todos os  seus direitos reservados - 2023
+  
+  </footer>
+  <script src="/src/JS/script.js"></script>
+</body>
+</html>
